@@ -1,0 +1,156 @@
+# Reading pref.tcl
+# do timing_generator_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0 {C:/intelFPGA_lite/20.1/lab_2_0/pllsen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:00:40 on Mar 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0" C:/intelFPGA_lite/20.1/lab_2_0/pllsen.v 
+# -- Compiling module pllsen
+# 
+# Top level modules:
+# 	pllsen
+# End time: 04:00:40 on Mar 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0 {C:/intelFPGA_lite/20.1/lab_2_0/intpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:00:41 on Mar 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0" C:/intelFPGA_lite/20.1/lab_2_0/intpll.v 
+# -- Compiling module intpll
+# 
+# Top level modules:
+# 	intpll
+# End time: 04:00:41 on Mar 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/db {C:/intelFPGA_lite/20.1/lab_2_0/db/intpll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:00:41 on Mar 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0/db" C:/intelFPGA_lite/20.1/lab_2_0/db/intpll_altpll.v 
+# -- Compiling module intpll_altpll
+# 
+# Top level modules:
+# 	intpll_altpll
+# End time: 04:00:41 on Mar 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/db {C:/intelFPGA_lite/20.1/lab_2_0/db/pllsen_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:00:41 on Mar 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0/db" C:/intelFPGA_lite/20.1/lab_2_0/db/pllsen_altpll.v 
+# -- Compiling module pllsen_altpll
+# 
+# Top level modules:
+# 	pllsen_altpll
+# End time: 04:00:41 on Mar 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/source {C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:00:41 on Mar 29,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0/source" C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv 
+# -- Compiling module timing_generator
+# 
+# Top level modules:
+# 	timing_generator
+# End time: 04:00:42 on Mar 29,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/source {C:/intelFPGA_lite/20.1/lab_2_0/source/counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:00:42 on Mar 29,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0/source" C:/intelFPGA_lite/20.1/lab_2_0/source/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 04:00:42 on Mar 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0 {C:/intelFPGA_lite/20.1/lab_2_0/img1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:00:42 on Mar 29,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0" C:/intelFPGA_lite/20.1/lab_2_0/img1.sv 
+# -- Compiling module img1
+# 
+# Top level modules:
+# 	img1
+# End time: 04:00:42 on Mar 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0 {C:/intelFPGA_lite/20.1/lab_2_0/timing_generator_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:00:42 on Mar 29,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0" C:/intelFPGA_lite/20.1/lab_2_0/timing_generator_tb.sv 
+# -- Compiling module timing_generator_tb
+# 
+# Top level modules:
+# 	timing_generator_tb
+# End time: 04:00:42 on Mar 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/simulation/modelsim {C:/intelFPGA_lite/20.1/lab_2_0/simulation/modelsim/tb_tm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:00:42 on Mar 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0/simulation/modelsim" C:/intelFPGA_lite/20.1/lab_2_0/simulation/modelsim/tb_tm.v 
+# -- Compiling module tb_tm
+# 
+# Top level modules:
+# 	tb_tm
+# End time: 04:00:42 on Mar 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_tm
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_tm 
+# Start time: 04:00:42 on Mar 29,2024
+# Loading work.tb_tm
+# Loading sv_std.std
+# Loading work.timing_generator
+# Loading work.intpll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.pllsen
+# Loading work.counter
+# Loading work.img1
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (8) for port 'img1_light'. The port definition is at: C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_tm/DUT File: C:/intelFPGA_lite/20.1/lab_2_0/simulation/modelsim/tb_tm.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'modul'. The port definition is at: C:/intelFPGA_lite/20.1/lab_2_0/source/counter.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_tm/DUT/cnt_pix_sensor_q File: C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv Line: 95
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'modul'. The port definition is at: C:/intelFPGA_lite/20.1/lab_2_0/source/counter.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_tm/DUT/cnt_line_sensor_q File: C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv Line: 106
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'modul'. The port definition is at: C:/intelFPGA_lite/20.1/lab_2_0/source/counter.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_tm/DUT/cnt_pix_interface_q File: C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'modul'. The port definition is at: C:/intelFPGA_lite/20.1/lab_2_0/source/counter.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_tm/DUT/cnt_line_interface_q File: C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv Line: 179
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'H'. The port definition is at: C:/intelFPGA_lite/20.1/lab_2_0/img1.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_tm/DUT/image1 File: C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv Line: 240
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'W'. The port definition is at: C:/intelFPGA_lite/20.1/lab_2_0/img1.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_tm/DUT/image1 File: C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv Line: 240
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'light'. The port definition is at: C:/intelFPGA_lite/20.1/lab_2_0/img1.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_tm/DUT/image1 File: C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv Line: 240
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: annbe  Hostname: DESKTOP-EN4QSQT  ProcessID: 2212
+#           Attempting to use alternate WLF file "./wlft306eie".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft306eie
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 100000  Instance: tb_tm.DUT.intpll.altpll_component.cycloneiii_pll.pll3
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 100000  Instance: tb_tm.DUT.senpll.altpll_component.cycloneiii_pll.pll3
+# Break key hit
+# Break in Module MF_cycloneiii_pll at $MODEL_TECH/../altera/verilog/src/altera_mf.v line 17732
+# End time: 04:14:44 on Mar 29,2024, Elapsed time: 0:14:02
+# Errors: 0, Warnings: 10

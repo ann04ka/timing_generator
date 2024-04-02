@@ -1,0 +1,24 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0 {C:/intelFPGA_lite/20.1/lab_2_0/pllsen.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0 {C:/intelFPGA_lite/20.1/lab_2_0/intpll.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/db {C:/intelFPGA_lite/20.1/lab_2_0/db/intpll_altpll.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/db {C:/intelFPGA_lite/20.1/lab_2_0/db/pllsen_altpll.v}
+vlog -sv -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/source {C:/intelFPGA_lite/20.1/lab_2_0/source/timing_generator.sv}
+vlog -sv -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/source {C:/intelFPGA_lite/20.1/lab_2_0/source/counter.sv}
+vlog -sv -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0 {C:/intelFPGA_lite/20.1/lab_2_0/img1.sv}
+
+vlog -sv -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0 {C:/intelFPGA_lite/20.1/lab_2_0/timing_generator_tb.sv}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/simulation/modelsim {C:/intelFPGA_lite/20.1/lab_2_0/simulation/modelsim/tb_tm.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_tm
+
+add wave *
+view structure
+view signals
+run -all

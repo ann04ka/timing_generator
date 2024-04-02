@@ -33,8 +33,7 @@ parameter sync_width_pix_sensor  = 32 ;
   wire  /*logic*/  sync_frame_sensor   ; 
   wire  /*logic*/  sync_line_sensor   ; 
   wire  /*logic*/  sync_frame_interface   ; 
-  wire  [7:0] img1_light   ; 
-  wire img_enable;
+  wire  [7:0]  img1_light   ; 
   reg    reset   ; 
   reg    clk_gen   ; 
   timing_generator    #(bit_cnt_pix_sensor, bit_cnt_line_sensor, bit_cnt_pix_interface, bit_cnt_line_interface)
@@ -43,13 +42,8 @@ parameter sync_width_pix_sensor  = 32 ;
       .sync_frame_sensor (sync_frame_sensor ) ,
 		.sync_line_interface (sync_line_interface ) ,
       .sync_frame_interface (sync_frame_interface ) ,
-		.img_enable(img_enable),
-		.img1_light(img1_light),
       .reset (reset ) ,
-      .clk_gen (clk_gen )
-		); 
-
-
+      .clk_gen (clk_gen ) ); 
 
 // "Constant Pattern"
 // Start Time = 0 ps, End Time = 1 ns, Period = 0 ps
@@ -59,7 +53,7 @@ parameter sync_width_pix_sensor  = 32 ;
   clk_gen = 0;
 	#10 ;
 	reset  = 1'b0  ;
-	repeat (50000) begin
+	repeat (5000) begin
 		#10 clk_gen = ~clk_gen;
 	end
   end
