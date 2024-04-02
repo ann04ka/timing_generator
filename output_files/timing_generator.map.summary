@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Mar 29 03:59:43 2024
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : timing_generator
+Top-level Entity Name : timing_generator
+Family : Cyclone IV E
+Total logic elements : 832
+    Total combinational functions : 832
+    Dedicated logic registers : 82
+Total registers : 82
+Total pins : 8
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 2

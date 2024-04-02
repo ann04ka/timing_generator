@@ -1,0 +1,197 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'intpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -87.546
+TNS   : -99.056
+
+Type  : Slow 1200mV 85C Model Setup 'senpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.529
+TNS   : -15.157
+
+Type  : Slow 1200mV 85C Model Setup 'img1:image1|counter:cnt_pix_q|c_out'
+Slack : -2.674
+TNS   : -32.088
+
+Type  : Slow 1200mV 85C Model Setup 'counter:cnt_pix_interface_q|c_out'
+Slack : -2.388
+TNS   : -28.656
+
+Type  : Slow 1200mV 85C Model Setup 'counter:cnt_pix_sensor_q|c_out'
+Slack : -2.044
+TNS   : -24.528
+
+Type  : Slow 1200mV 85C Model Hold 'intpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.054
+TNS   : -1.054
+
+Type  : Slow 1200mV 85C Model Hold 'senpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'img1:image1|counter:cnt_pix_q|c_out'
+Slack : 0.542
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'counter:cnt_pix_sensor_q|c_out'
+Slack : 0.745
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'counter:cnt_pix_interface_q|c_out'
+Slack : 0.765
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter:cnt_pix_interface_q|c_out'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter:cnt_pix_sensor_q|c_out'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'img1:image1|counter:cnt_pix_q|c_out'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'senpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.180
+TNS   : -2.700
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'intpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.935
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_gen'
+Slack : 9.895
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'intpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -80.022
+TNS   : -90.588
+
+Type  : Slow 1200mV 0C Model Setup 'senpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.977
+TNS   : -11.394
+
+Type  : Slow 1200mV 0C Model Setup 'img1:image1|counter:cnt_pix_q|c_out'
+Slack : -2.640
+TNS   : -31.680
+
+Type  : Slow 1200mV 0C Model Setup 'counter:cnt_pix_interface_q|c_out'
+Slack : -2.118
+TNS   : -25.416
+
+Type  : Slow 1200mV 0C Model Setup 'counter:cnt_pix_sensor_q|c_out'
+Slack : -1.804
+TNS   : -21.648
+
+Type  : Slow 1200mV 0C Model Hold 'intpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.038
+TNS   : -1.038
+
+Type  : Slow 1200mV 0C Model Hold 'senpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'img1:image1|counter:cnt_pix_q|c_out'
+Slack : 0.501
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'counter:cnt_pix_sensor_q|c_out'
+Slack : 0.692
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'counter:cnt_pix_interface_q|c_out'
+Slack : 0.710
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter:cnt_pix_interface_q|c_out'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter:cnt_pix_sensor_q|c_out'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'img1:image1|counter:cnt_pix_q|c_out'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'senpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.180
+TNS   : -2.700
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'intpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.933
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_gen'
+Slack : 9.906
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'intpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -38.340
+TNS   : -43.464
+
+Type  : Fast 1200mV 0C Model Setup 'senpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.540
+TNS   : -2.540
+
+Type  : Fast 1200mV 0C Model Setup 'img1:image1|counter:cnt_pix_q|c_out'
+Slack : -1.225
+TNS   : -14.700
+
+Type  : Fast 1200mV 0C Model Setup 'counter:cnt_pix_interface_q|c_out'
+Slack : -0.405
+TNS   : -4.860
+
+Type  : Fast 1200mV 0C Model Setup 'counter:cnt_pix_sensor_q|c_out'
+Slack : -0.262
+TNS   : -3.144
+
+Type  : Fast 1200mV 0C Model Hold 'intpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.506
+TNS   : -0.506
+
+Type  : Fast 1200mV 0C Model Hold 'senpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'img1:image1|counter:cnt_pix_q|c_out'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'counter:cnt_pix_sensor_q|c_out'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'counter:cnt_pix_interface_q|c_out'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter:cnt_pix_interface_q|c_out'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter:cnt_pix_sensor_q|c_out'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'img1:image1|counter:cnt_pix_q|c_out'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'senpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'intpll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.014
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_gen'
+Slack : 9.594
+TNS   : 0.000
+
+------------------------------------------------------------
