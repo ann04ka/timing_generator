@@ -1,11 +1,11 @@
-`timescale 1ns / 1ns
+
 module timing_generator_tb;
 
   // Parameters
-  localparam int bit_cnt_pix_sensor = 12;
-  localparam int bit_cnt_line_sensor = 12;
-  localparam int bit_cnt_pix_interface = 12;
-  localparam int bit_cnt_line_interface = 12;
+  localparam int bit_cnt_pix_sensor = 8;
+  localparam int bit_cnt_line_sensor = 8;
+  localparam int bit_cnt_pix_interface = 8;
+  localparam int bit_cnt_line_interface = 8;
 
   //Ports
   logic clk_gen = 0;
@@ -29,12 +29,12 @@ module timing_generator_tb;
       .sync_frame_interface(sync_frame_interface)
   );
 
-  always #1000 clk_gen = !clk_gen;
-   assign #400 reset = 1;
-//   assign #600 reset = 0;
-//  initial begin
-//    reset = 1;
-//    #10;
-//    reset = 0;
-//  end
+  always #5 clk_gen = !clk_gen;
+//   assign #4 reset = 1;
+  //   assign #14 reset = 0;
+  initial begin
+    reset = 1;
+    #10;
+    reset = 0;
+  end
 endmodule
