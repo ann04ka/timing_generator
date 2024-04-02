@@ -1,0 +1,161 @@
+module timing_generator #(
+    parameter int bit_cnt_pix_sensor = 8,
+    parameter int bit_cnt_line_sensor = 8,
+    parameter int bit_cnt_pix_interface = 8,
+    parameter int bit_cnt_line_interface = 8
+
+
+) (  // часть где объявляются входные/выходные сигналы.
+     // Формат данных logic являтеся эквавилентом REG и WIRE в verilog
+    input logic clk_gen,
+    input logic reset,
+    output logic sync_line_sensor,           // сигнал синхронизации по строке СЕНСОРА
+    output logic sync_frame_sensor,          // сигнал синхронизации по кадру СЕНСОРА
+    output logic sync_line_interface,        // сигнал синхронизации по строке ИНТЕРФЕЙСА
+    output logic sync_frame_interface        // сигнал синхронизации по кадру ИНТЕРФЕЙСА
+);
+
+  // объявление внутренних сигналов  / параметров
+  // !!!!!!!!!!! нужно прописать свои параметра - количество ПИКСЕЛЕЙ и СТРОК !!!!!!!!!!!!!!!!
+  localparam int total_pix_sensor       = 200; // общее количество пикселей в строке для СЕНСОРА
+    localparam int active_pix_sensor      = 200; // активное количество пикселей для СЕНСОРА
+    localparam int back_porch_pix_sensor  = 200; // задний участок пикселей гашения для СЕНСОРА
+    localparam int sync_width_pix_sensor  = 200; // длительность синхроимпульса в пикселях для СЕНСОРА
+    localparam int front_porch_pix_sensor = 200; // передний участок пикселей гашения для СЕНСОРА
+    localparam int blank_total_pix_sensor = 200; // общее количество пикселей гашения для СЕНСОРА
+
+    localparam int total_line_sensor        = 200; // общее количество строк в строке для СЕНСОРА
+    localparam int active_line_sensor       = 200; // активное количество строк для СЕНСОРА
+    localparam int back_porch_line_sensor   = 200; // задний участок строк гашения для СЕНСОРА
+    localparam int sync_width_line_sensor   = 200; // длительность синхроимпульса в пикселях для СЕНСОРА
+    localparam int front_porch_line_sensor  = 200; // передний участок строк гашения для СЕНСОРА
+    localparam int blank_total_line_sensor  = 200; // общее количество строк гашения для СЕНСОРА
+
+    localparam int total_pix_interface        = 200; // общее количество пикселей в строке для ИНТЕРФЕЙСА
+    localparam int active_pix_interface       = 200; // активное количество пикселей для ИНТЕРФЕЙСА
+    localparam int back_porch_pix_interface   = 200; // задний участок пикселей гашения для ИНТЕРФЕЙСА
+    localparam int sync_width_pix_interface   = 200; // длительность синхроимпульса в пикселях для ИНТЕРФЕЙСА
+    localparam int front_porch_pix_interface  = 200; // передний участок пикселей гашения для ИНТЕРФЕЙСА
+    localparam int blank_total_pix_interface  = 200; // общее количество пикселей гашения для ИНТЕРФЕЙСА
+
+    localparam int total_line_interface       = 200; // общее количество строк в строке для ИНТЕРФЕЙСА
+    localparam int active_line_interface      = 200; // активное количество строк для ИНТЕРФЕЙСА
+    localparam int back_porch_line_interface  = 200; // задний участок строк гашения для ИНТЕРФЕЙСА
+    localparam int sync_width_line_interface  = 200; // длительность синхроимпульса в пикселях для ИНТЕРФЕЙСА
+    localparam int front_porch_line_interface = 200; // передний участок строк гашения для ИНТЕРФЕЙСА
+    localparam int blank_total_line_interface = 200; // общее количество строк гашения для ИНТЕРФЕЙСА
+  ////////////////////////////////////////////////////
+  logic enable;
+  // сигналы счетчиков сенсора
+  logic clk_sensor;
+  logic [(bit_cnt_pix_sensor-1):0] cnt_pix_sensor;
+  logic cnt_pix_sensor_end;
+  logic [(bit_cnt_line_sensor-1):0] cnt_line_sensor;
+  logic cnt_line_sensor_end;
+  // сигналы счетчиков сенсора
+  logic clk_interface;
+  logic [(bit_cnt_pix_interface-1):0] cnt_pix_interface;
+  logic cnt_pix_interface_end;
+  logic [(bit_cnt_line_interface-1):0] cnt_line_interface;
+  logic cnt_line_interface_end;
+  // сигналы синхронизации, гашения и актиных частей кадра
+  logic h_active_sensor;
+  logic h_blank_sensor;
+  logic h_sync_sensor;
+  logic v_active_sensor;
+  logic v_blank_sensor;
+  logic v_sync_sensor;
+
+  logic h_active_interface;
+  logic h_blank_interface;
+  logic h_sync_interface;
+  logic v_active_interface;
+  logic v_blank_interface;
+  logic v_sync_interface;
+
+  // начало основного блока
+  assign enable = reset;
+  ////////////////////////////////////////////////////////////
+  //  установка PLL
+
+
+
+  ////////////////////////////////////////////////////////////
+  //  формирования сигналов для сенсора
+  ////////////////////////////////////////////////////////////
+  assign clk_sensor = clk_gen;
+
+  //  счетчик пикселей
+  counter #(
+      .N(bit_cnt_pix_sensor) // разрядность счетчика.  Заменить bit_cnt_pix_sensor на необходимую разрядность
+  ) cnt_pix_sensor_q (
+      // !!!! важно изменять название конкретного счетчика в проекте.
+      // вместо CNT_PIX_SENSOR_Q прописать свое название.
+
+      .clk(clk_sensor),  // тактовый сигнал
+      .reset(reset),  // сигнал сброса.
+      .enable(enable),  // сигнал разрешения работы блока. Если 1 - то работает ВСЕ
+      .modul(total_pix_sensor), // модуль пересчета - т.е. до какого числа будет вестись сч
+      .q_out(cnt_pix_sensor),  // выходная шина счетчика
+      .c_out(cnt_pix_sensor_end)    // сигнал переплнения, когда выходная шина = модулю
+  );
+
+  //  НУЖНО добавить еще 1 счетчик, который будет отвечать за подсчет строк
+
+
+
+  ////////////////////////////////////////////////////////////
+  //  блок в котором описываем формирвоание сигналов тайминг генератора сенсора
+  ////////////////////////////////////////////////////////////
+  always_ff @(posedge clk_sensor, posedge reset)
+    if (reset) begin
+      h_active_sensor <= 1;   // вместо 1 установить необходимые значения
+    end else
+      if (cnt_pix_sensor == 1)  begin     // условие нужно модифицировать под необходимый стандарт
+      h_active_sensor <= 1;   // вместо 1 установить необходимые значения
+    end else begin
+      h_active_sensor <= 1;   // вместо 1 установить необходимые значения
+    end
+
+  // далее нужно описать все необхоимые сигналы для СЕНСОРА
+  // h_active_sensor
+  // h_blank_sensor
+  // h_sync_sensor
+  // v_active_sensor
+  // v_blank_sensor
+  // v_sync_sensor
+
+
+
+
+  ////////////////////////////////////////////////////////////
+  //  повторить всю логику формирвоания сигналов для интерфейса
+  ////////////////////////////////////////////////////////////
+    assign clk_interface = clk_gen;
+
+  // два счетчка  +
+  // h_active_sensor
+  // h_blank_sensor
+  // h_sync_sensor
+  // v_active_sensor
+  // v_blank_sensor
+  // v_sync_sensor
+
+
+
+
+
+
+
+
+
+  ////////////////////////////////////////////////////////////-
+  // формирвоание выходных сигналов. Для этого на сигналы OUT port  подать нужные сигналы.
+  ////////////////////////////////////////////////////////////-
+  assign sync_line_sensor     = h_sync_sensor;
+  assign sync_frame_sensor    = v_sync_sensor;
+  assign sync_line_interface  = h_sync_interface;
+  assign sync_frame_interface = v_sync_interface;
+  ////////////////////////////////////////////////////////////-
+
+endmodule
