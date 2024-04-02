@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sync_line_sensor",
+					"strict" : false
+				},
+				{
+					"name" : "sync_frame_sensor",
+					"strict" : false
+				},
+				{
+					"name" : "sync_line_interface",
+					"strict" : false
+				},
+				{
+					"name" : "sync_frame_interface",
+					"strict" : false
+				},
+				{
+					"name" : "img_enable",
+					"strict" : false
+				},
+				{
+					"name" : "img1_light",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
