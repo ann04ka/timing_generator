@@ -1,0 +1,32 @@
+# Reading pref.tcl
+# do timing_generator_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/lab_2_0/source {C:/intelFPGA_lite/20.1/lab_2_0/lab_2_0/source/timing_generator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:36:59 on Mar 14,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0/lab_2_0/source" C:/intelFPGA_lite/20.1/lab_2_0/lab_2_0/source/timing_generator.sv 
+# -- Compiling module timing_generator
+# 
+# Top level modules:
+# 	timing_generator
+# End time: 10:37:00 on Mar 14,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/20.1/lab_2_0/lab_2_0/source {C:/intelFPGA_lite/20.1/lab_2_0/lab_2_0/source/counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:37:00 on Mar 14,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/20.1/lab_2_0/lab_2_0/source" C:/intelFPGA_lite/20.1/lab_2_0/lab_2_0/source/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 10:37:00 on Mar 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
